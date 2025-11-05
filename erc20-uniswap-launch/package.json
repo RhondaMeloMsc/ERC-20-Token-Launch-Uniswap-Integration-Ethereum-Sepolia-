@@ -1,0 +1,26 @@
+{
+  "name": "erc20-uniswap-launch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Launch an ERC-20 token on Ethereum/Sepolia via Hardhat (TypeScript) and optionally add liquidity on Uniswap (V2 or V3) using configurable addresses.",
+  "license": "MIT",
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.ts --network hardhat",
+    "deploy:sepolia": "hardhat run scripts/deploy.ts --network sepolia",
+    "verify:sepolia": "hardhat run scripts/verify.ts --network sepolia",
+    "addlp:v2:local": "hardhat run scripts/uniswapV2_addLiquidity.ts --network hardhat",
+    "addlp:v2:sepolia": "hardhat run scripts/uniswapV2_addLiquidity.ts --network sepolia",
+    "addlp:v3:local": "hardhat run scripts/uniswapV3_addLiquidity.ts --network hardhat",
+    "addlp:v3:sepolia": "hardhat run scripts/uniswapV3_addLiquidity.ts --network sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "5.0.0",
+    "dotenv": "16.4.5",
+    "ethers": "6.13.2",
+    "hardhat": "2.22.10",
+    "typescript": "5.6.3",
+    "ts-node": "10.9.2"
+  }
+}
